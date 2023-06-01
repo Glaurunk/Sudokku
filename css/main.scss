@@ -1,0 +1,78 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    background-color: black;
+    margin: auto;
+}
+
+#container {
+    width: 100%;
+    margin: 2rem;
+    h1 {
+        text-align: center;
+        color: white;
+    }
+}
+
+#content {
+    margin: auto;
+    width: 700px;
+    max-width: 700px;
+    .row {
+        display: flex;
+        .cell {
+            width: 75px;
+            height: 75px;
+            border: 1px solid white;
+            position: relative;
+            z-index: 3;
+            transition: .3s;
+            &:hover {
+                cursor: pointer;
+                background-color: white;
+                color: black;
+                transition: .3s;
+            }
+            &.hidden {
+                color: red;
+            }
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            color: white;
+        }
+    }
+}
+
+#numbers {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    .uibtn {
+        padding: .75rem 1.5rem;
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        border-radius: .5rem;
+        font-size: 24px;
+        margin: 0 .25rem;
+        transition: .3s;
+        &:hover {
+            color: black;
+            background-color: white;
+            cursor: pointer;
+            transition: .3s;
+        }
+        &.selected {
+            color: black;
+            background-color: aliceblue;
+        }
+    }
+}
